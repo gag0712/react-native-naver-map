@@ -8,12 +8,12 @@ import com.facebook.react.viewmanagers.RNCNaverMapArrowheadPathManagerInterface
 
 abstract class RNCNaverMapArrowheadPathManagerSpec<T : View> :
   SimpleViewManager<T>(),
-  RNCNaverMapArrowheadPathManagerInterface<T?> {
+  RNCNaverMapArrowheadPathManagerInterface<T> {
   private val mDelegate: ViewManagerDelegate<T>
 
   init {
     mDelegate = RNCNaverMapArrowheadPathManagerDelegate(this)
   }
 
-  override fun getDelegate(): ViewManagerDelegate<T>? = mDelegate
+  override fun getDelegate(): ViewManagerDelegate<T> = mDelegate
 }

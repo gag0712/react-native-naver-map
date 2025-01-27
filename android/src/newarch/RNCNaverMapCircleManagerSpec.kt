@@ -8,12 +8,12 @@ import com.facebook.react.viewmanagers.RNCNaverMapCircleManagerInterface
 
 abstract class RNCNaverMapCircleManagerSpec<T : View> :
   SimpleViewManager<T>(),
-  RNCNaverMapCircleManagerInterface<T?> {
+  RNCNaverMapCircleManagerInterface<T> {
   private val mDelegate: ViewManagerDelegate<T>
 
   init {
     mDelegate = RNCNaverMapCircleManagerDelegate(this)
   }
 
-  override fun getDelegate(): ViewManagerDelegate<T>? = mDelegate
+  override fun getDelegate(): ViewManagerDelegate<T> = mDelegate
 }
